@@ -1,0 +1,35 @@
+.nav2{
+   display: block;
+}
+
+.colormenu{
+    background-color: rgb(247,156,8);
+}
+
+table{
+    display: none;
+}
+.table{
+    display: block;
+    background-color: red;
+}
+
+h3{
+    text-align: center;
+}
+h4{
+    display: none;
+}
+
+.float{
+    float: right;
+    color: beige;
+    margin-right: 15px;
+    margin-top: 50px;
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+    background-color: darkcyan;
+   
+}
+

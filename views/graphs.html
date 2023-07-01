@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphiques</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style1.css"></link>
+    <link rel="stylesheet" type="text/css" href="../styles/style2.css"></link>
+</head>
+<body>
+    <div class="conteneur">
+        <header>
+          <img src="../pictures/logo.png" alt="">
+            <nav class="nav1 nav">
+                <ul><!--
+                    --><li><a href="trimestre1.html" class="trimestre">1er Trimestre</a></li><!--
+                    --><li><a href="trimestre2.html" class="trimestre">2ème Trimestre</a></li><!--
+                    --><li><a href="trimestre3.html" class="trimestre">3ème Trimestre</a></li>
+                </ul>
+            </nav>
+               
+            <nav class="nav2 nav">
+              
+            </nav>
+           
+        </header>
+
+        <section>
+            <div>
+                <a href="#" class="float" id="college">Graphs Collège</a>
+            </div>
+            <div>
+                <a href="#" class="float" id="lycee">Graphs Lycée</a>
+            </div>
+
+            <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                    college.addEventListener("click", function() {
+  
+                      const ctx = document.getElementById('myChart');
+              
+              new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ['1 Trimestre', '2ème Trimestre', '3ème Trimestre'],
+                  datasets: [{
+                    label: '6ème',
+                    data: [72.72, 72.72, 91.66],
+                    borderWidth: 1
+                  },
+                  {
+                    label: '5ème',
+                    data: [65.21, 66.66, 69.56],
+                    borderWidth: 1
+                  },
+                  {
+                    label: '4ème',
+                    data: [86.36, 100, 100],
+                    borderWidth: 1
+                  },
+                  {
+                    label: '3ème',
+                    data: [69.56, 47.82],
+                    borderWidth: 1
+                  },
+              ]
+              
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+   
+                    });
+
+                     lycee.addEventListener("click", function() {
+                  var oldcanv = document.getElementById('canvas');
+
+
+
+                                      const ctx = document.getElementById('myChart');
+                              
+                              new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                  labels: ['1 Trimestre', '2ème Trimestre', '3ème Trimestre'],
+                                  datasets: [{
+                                    label: 'Seconde',
+                                    data: [52.63, 31.57, 52.63],
+                                    borderWidth: 1
+                                  },
+                                  {
+                                    label: 'Première',
+                                    data: [70.58, 58.82, 82.35],
+                                    borderWidth: 1
+                                  },
+                                  {
+                                    label: 'Terminale',
+                                    data: [63.63, 41.66],
+                                    borderWidth: 1
+                                  },
+                                  
+                              ]
+                              
+                                },
+                                options: {
+                                  scales: {
+                                    y: {
+                                      beginAtZero: true
+                                    }
+                                  }
+                                }
+                              });
+                  
+                                    });
+
+
+
+                    
+              </script>
+        </section>
+    </div>
+
+
+    
+</body>
+</html>
